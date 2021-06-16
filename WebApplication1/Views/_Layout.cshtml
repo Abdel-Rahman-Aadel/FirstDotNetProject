@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/bootswatch/solar/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="row mt-4 ">
+            <div class="col btn btn-dark">
+                <a asp-controller="Home" asp-action="Index">Home</a>
+            </div>
+
+            <div class="col btn btn-dark ml-3">
+                <a href="#">About</a>
+            </div>
+            <div class="col btn btn-dark ml-3">
+                <a href="#">Gallary</a>
+            </div>
+            <div class="col  ml-3">
+                <a asp-controller="Home" asp-action="contact" class="btn btn-dark">contact</a>
+            </div>
+
+
+
+        </div>
+        <div class="row">
+            @RenderSection("abdo", required: false)
+        </div>
+
+
+        @RenderBody()
+
+
+        <div class="row mt-5 ">
+            <div class="col">
+                <center>
+                    <h4>All rights reserved  by abdo</h4>
+                </center>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
